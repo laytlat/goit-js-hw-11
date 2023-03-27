@@ -10,7 +10,7 @@ export default async function getDataFromAPI(queryName) {
       q: `${queryName}`,
       image_type: 'photo',
       orientation: 'horizontal',
-      per_page: 3,
+      per_page: 40,
       page: 1,
     },
   };
@@ -19,4 +19,3 @@ export default async function getDataFromAPI(queryName) {
   });
   return data;
 }
-// .then(data => console.log(data.data.hits));

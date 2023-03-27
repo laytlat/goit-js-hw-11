@@ -20,7 +20,7 @@ function renderMarkup(array) {
       <b>Likes ${element.likes}</b>
     </p>
     <p class="info-item">
-      <b>Views ${element.vievs}</b>
+      <b>Views ${element.views}</b>
     </p>
     <p class="info-item">
       <b>Comments ${element.comments}</b>
@@ -39,4 +39,9 @@ function inputSubmit(e) {
   e.preventDefault();
   const form = e.currentTarget.elements.searchQuery.value;
   getDataFromAPI(form).then(renderMarkup);
+  clearPage();
+}
+
+function clearPage() {
+  gallery.innerHTML = '';
 }
