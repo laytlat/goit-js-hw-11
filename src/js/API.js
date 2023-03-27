@@ -15,7 +15,7 @@ export default async function getDataFromAPI(queryName) {
     },
   };
   const data = await axios.get(BASE_URL, options).then(data => {
-    return data.data.hits;
+    return data.data;
   });
   return data;
 }
