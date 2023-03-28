@@ -1,0 +1,24 @@
+.load-more {
+  display: flex;
+
+  margin: 20px auto;
+  padding: 10px 20px;
+
+  background-color: rgb(105, 105, 238);
+  border-style: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: color, background-color 250ms linear;
+}
+
+.load-more:hover,
+.load-more:focus {
+  color: white;
+  background-color: rgb(67, 67, 246);
+}
+
+.is-hidden {
+  display: none;
+}
