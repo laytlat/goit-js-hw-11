@@ -1,5 +1,6 @@
 import Notiflix from 'notiflix';
 
+import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import { getDataFromAPI } from './API';
@@ -28,6 +29,7 @@ function inputSubmit(e) {
       Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
       renderMarkup(data);
       showButton();
+      let gallery = new SimpleLightbox('.gallery a');
     })
     .catch(error => console.log(error));
 }

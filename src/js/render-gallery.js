@@ -1,18 +1,15 @@
-import SimpleLightbox from 'simplelightbox';
-
-// const lightbox = new SimpleLightbox('.gallery a', {
-//   captionsData: 'alt',
-//   captionDelay: 250,
-// });
-
 const galleryEl = document.querySelector('.gallery');
 
 export function renderMarkup(dataObject) {
   dataObject.hits.map(element => {
     const dataCard = `
 
+
+     
         <div class="photo-card gallery__item">
-  <img class="gallery__image" src="${element.webformatURL}" alt="${element.tags}" loading="lazy" />
+ <a  href="${element.largeImageURL}">
+  <img class="gallery__image" src="${element.webformatURL}" alt="${element.tags}" />
+</a>
   <div class="info">
     <p class="info-item">
       <b>Likes</b> <span>${element.likes}</span>
@@ -28,6 +25,7 @@ export function renderMarkup(dataObject) {
     </p>
   </div>
 </div>
+
 
       `;
     galleryEl.insertAdjacentHTML('beforeend', dataCard);
