@@ -7,7 +7,11 @@ loadMoreBtn.addEventListener('click', onBtnClickLoadMore);
 
 function onBtnClickLoadMore() {
   hideButton();
-  loadMoreDataFromAPI().then(renderMarkup);
+  loadMoreDataFromAPI().then(data => {
+    renderMarkup(data);
+    let gallery = new SimpleLightbox('.gallery a');
+    gallery.refresh();
+  });
   showButton();
 }
 

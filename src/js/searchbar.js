@@ -30,6 +30,7 @@ function inputSubmit(e) {
       renderMarkup(data);
       showButton();
       let gallery = new SimpleLightbox('.gallery a');
+      gallery.refresh();
     })
     .catch(error => console.log(error));
 }
