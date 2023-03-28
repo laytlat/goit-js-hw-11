@@ -15,6 +15,7 @@ const options = {
 
 export async function getDataFromAPI(queryName) {
   options.params.q = queryName;
+  options.params.page = 1;
   const data = await axios
     .get(BASE_URL, options)
     .then(response => response.data);
