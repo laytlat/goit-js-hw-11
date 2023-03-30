@@ -3,9 +3,6 @@ const galleryEl = document.querySelector('.gallery');
 export function renderMarkup(dataObject) {
   dataObject.hits.map(element => {
     const dataCard = `
-
-
-     
         <div class="photo-card gallery__item">
  <a  href="${element.largeImageURL}">
   <img class="gallery__image" src="${element.webformatURL}" alt="${element.tags}" />
@@ -25,8 +22,6 @@ export function renderMarkup(dataObject) {
     </p>
   </div>
 </div>
-
-
       `;
     galleryEl.insertAdjacentHTML('beforeend', dataCard);
   });

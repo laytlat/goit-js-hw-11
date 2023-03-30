@@ -8,8 +8,6 @@ import { renderMarkup, clearPage } from './render-gallery';
 import { showButton, hideButton } from './load-more-button';
 
 const searchForm = document.querySelector('#search-form');
-const gallery = document.querySelector('.gallery');
-const loadMoreBtn = document.querySelector('.load-more');
 
 searchForm.addEventListener('submit', inputSubmit);
 
